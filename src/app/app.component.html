@@ -1,0 +1,15 @@
+<div style= "background-color: palegreen;">
+<h1 style="text-align:center;">{{title}}</h1>
+<input style="font-style:italic ; font-family: 'Times New Roman', Times, serif"   type = "text" placeholder="Enter New Task" #task/>
+<br>
+<br>
+<button style="color: indigo; font-family: 'Times New Roman', Times, serif;" (click)="addTask(task.value)">Add new Task</button>
+
+<br>
+<br>
+
+<ul *ngFor="let item of list">
+<li>{{item.name}} <button style="color: red; font-family: 'Times New Roman', Times, serif;" (click)="removeTask(item.id)">Remove</button></li>
+</ul>
+</div>
+<router-outlet></router-outlet>
